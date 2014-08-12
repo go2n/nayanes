@@ -113,7 +113,7 @@ if ( !isset($_GET['keywords']) && !isset($_GET['nodeid']) ) {
       <script type="text/javascript">
       jQuery(function() {
         $('#node<?php echo $nodeid; ?>-info .loader, #node<?php echo $nodeid; ?>-info .alert').remove();
-        $('#node<?php echo $nodeid; ?>-info').append('<?php echo '<div class="alert alert-success result-info">'.sprintf(__('Found %d record(s)'), $data['result_num']).'</div>' ?>');
+        $('#node<?php echo $nodeid; ?>-info').append('<?php echo '<div class="alert alert-success result-info" style="margin-left: 6px; margin-right: 6px;">'.sprintf(__('Found %d record(s)'), $data['result_num']).'</div>' ?>');
       });
       </script>
       <?php
