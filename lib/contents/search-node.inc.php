@@ -84,8 +84,8 @@ if ( !isset($_GET['keywords']) && !isset($_GET['nodeid']) ) {
       }
       if ($data['result_num'] > $row) {
         echo '<tr>';
-        echo '<td class="field-no">&nbsp;</td>';
-        echo '<td class="field-paging">'.paging($data['result_num'], $data['result_showed'], 5);
+//         echo '<td class="field-no">&nbsp;</td>';
+        echo '<td colspan="5" style="text-align: center;" class="field-paging">'.paging($data['result_num'], $data['result_showed'], 5);
         ?>
         <script type="text/javascript">
         jQuery(function() {
@@ -104,7 +104,9 @@ if ( !isset($_GET['keywords']) && !isset($_GET['nodeid']) ) {
         </script>
         <?php
         echo '</td>';
-        echo '<td colspan="3"><a class="btn btn-success btn-small field-more" href="'.$slims_url.'/index.php?search=Search&keywords='.$keywords.'" target="blank">'.__('View original result from this provider').'</a></td>';
+        echo '</tr>';
+        echo '<tr>';
+        echo '<td colspan="5" style="text-align: center;"><a class="btn btn-success btn-small field-more" href="'.$slims_url.'/index.php?search=Search&keywords='.$keywords.'" target="blank">'.__('View original result from this provider').'</a></td>';
         echo '</tr>';
       }
       echo '</tbody>'."\n";
